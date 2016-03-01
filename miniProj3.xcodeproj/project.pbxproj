@@ -12,6 +12,9 @@
 		BEA7A0AE1C8558EF005387F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA7A0AC1C8558EF005387F6 /* Main.storyboard */; };
 		BEA7A0B01C8558EF005387F6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BEA7A0AF1C8558EF005387F6 /* Assets.xcassets */; };
 		BEA7A0B31C8558EF005387F6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA7A0B11C8558EF005387F6 /* LaunchScreen.storyboard */; };
+		BEA7A0BB1C855E87005387F6 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7A0BA1C855E87005387F6 /* SettingsTableViewController.swift */; };
+		BEA7A0BD1C855EB9005387F6 /* LocationCocoapodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7A0BC1C855EB9005387F6 /* LocationCocoapodViewController.swift */; };
+		BEA7A0BF1C855F13005387F6 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7A0BE1C855F13005387F6 /* WebViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		BEA7A0AF1C8558EF005387F6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BEA7A0B21C8558EF005387F6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BEA7A0B41C8558EF005387F6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BEA7A0BA1C855E87005387F6 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		BEA7A0BC1C855EB9005387F6 /* LocationCocoapodViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationCocoapodViewController.swift; sourceTree = "<group>"; };
+		BEA7A0BE1C855F13005387F6 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +63,9 @@
 				BEA7A0A81C8558EF005387F6 /* AppDelegate.swift */,
 				BEA7A0AA1C8558EF005387F6 /* ViewController.swift */,
 				BEA7A0AC1C8558EF005387F6 /* Main.storyboard */,
+				BEA7A0BE1C855F13005387F6 /* WebViewController.swift */,
+				BEA7A0BC1C855EB9005387F6 /* LocationCocoapodViewController.swift */,
+				BEA7A0BA1C855E87005387F6 /* SettingsTableViewController.swift */,
 				BEA7A0AF1C8558EF005387F6 /* Assets.xcassets */,
 				BEA7A0B11C8558EF005387F6 /* LaunchScreen.storyboard */,
 				BEA7A0B41C8558EF005387F6 /* Info.plist */,
@@ -138,6 +147,9 @@
 			files = (
 				BEA7A0AB1C8558EF005387F6 /* ViewController.swift in Sources */,
 				BEA7A0A91C8558EF005387F6 /* AppDelegate.swift in Sources */,
+				BEA7A0BB1C855E87005387F6 /* SettingsTableViewController.swift in Sources */,
+				BEA7A0BF1C855F13005387F6 /* WebViewController.swift in Sources */,
+				BEA7A0BD1C855EB9005387F6 /* LocationCocoapodViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
