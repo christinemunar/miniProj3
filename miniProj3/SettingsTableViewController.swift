@@ -8,8 +8,12 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController {
+private let reuseIdentifier = "Cell"
 
+class SettingsTableViewController: UITableViewController {
+    
+    var settingNames = ["Restaurants", "Coffee Shops", "Movie Theatres"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,23 +33,24 @@ class SettingsTableViewController: UITableViewController {
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return 1
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return settingNames.count
     }
 
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
 
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SettingsTableViewCell
+        cell.cellLabel.text = settingNames[indexPath.row] as? String
+        
         // Configure the cell...
 
         return cell
     }
-    */
+    
 
     /*
     // Override to support conditional editing of the table view.

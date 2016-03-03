@@ -1,0 +1,927 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		049AA06541B8EFF00F73A5CBEE5BD6C4 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 77C276405978C362BCA7CC1933270E2B /* CoreText.framework */; };
+		05311756DB0AD72B21E37B3EE91787C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336BAF1862D7EFF4F3248C2EB47CED5F /* Foundation.framework */; };
+		12E63E4D53F66E763C3C837F26DBD518 /* StoryboardLocationRequest.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0DA9BD8377214AA3BD894C6E040017B /* StoryboardLocationRequest.storyboard */; };
+		170DDBE0A48E6B8B67BE7C7A87CF8E70 /* STLocationRequest-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 26739A9305699545F1A658B60A6CEFE1 /* STLocationRequest-dummy.m */; };
+		173FEBE2DDA2B0FEFCAFF445EAA5F1EC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E523DB958A158203E845F825AEE6E4CD /* UIKit.framework */; };
+		199444605CB98BEA1FB114B7BE118041 /* STLocationRequest.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A1FCD07738A56D185F15C2D5453F5E27 /* STLocationRequest.bundle */; };
+		26D54AF4D9A1F4DDBC4ED62673691523 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E523DB958A158203E845F825AEE6E4CD /* UIKit.framework */; };
+		322979BAFC47411818F5AF0301894EA9 /* STRotatingCamera.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FFC75E952BEA1EDAAA94BBF17BA54A2 /* STRotatingCamera.swift */; };
+		56E407C6A69EDABBF56A1B426977081A /* LFTPulseAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC3BE5E97919C08188C41EF051F19761 /* LFTPulseAnimation.swift */; };
+		7041CF04261634CBCA5C78C15B65DD37 /* Pods-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7A8DA77F68AE29E00125106F483BCD50 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336BAF1862D7EFF4F3248C2EB47CED5F /* Foundation.framework */; };
+		83B4B2E38908474E20812D4FE4597565 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2907ADD9DE89E61E0D587E8FF188CB14 /* MapKit.framework */; };
+		8A54E4459B3D434D5115173CB0275C25 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */; };
+		ABABCE508732806103FE5B6FAB95F761 /* Font-Awesome-Swift-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C8CE23F8DC893685CA282EE621F4938 /* Font-Awesome-Swift-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B2359160D4FC6CF8AA66C892B2B7C590 /* Font-Awesome-Swift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B63350D836F5573E88D311BC57F4618 /* Font-Awesome-Swift-dummy.m */; };
+		B3620ABC8CD172E6636232547D4D3E92 /* Font_Awesome_Swift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A762782E2AF6946A363F199E9C1ED16 /* Font_Awesome_Swift.framework */; };
+		BDE1212E948A9CDCAEA1621A6B65F5FA /* FAIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5AB36B42B0D0E4BA136D011E939C51F /* FAIcon.swift */; };
+		BEA8DF1E226293FF1B8F26F5F2D2E47F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 336BAF1862D7EFF4F3248C2EB47CED5F /* Foundation.framework */; };
+		D6FDDBA4DA11D4617DB5541738C6EDE4 /* STLocationRequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90683B212AD6B24D59D7662EBE8C62F4 /* STLocationRequestController.swift */; };
+		DB68DF12FE392702CC1357B3E9E71E45 /* UIViewController+STLocationRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 77B6D8DCB607765BD16A5A1EF8904D4B /* UIViewController+STLocationRequest.swift */; };
+		DF6631DD498411E7CF772869E0BD9F3B /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7BD20239A4CD55715EB3E4F931C8A2D1 /* FontAwesome.ttf */; };
+		EC08B01DFC56DD96279C04B28BCB4876 /* STLocationRequest-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4906FB464592B5137E80C717F31801D5 /* STLocationRequest-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F90F25956B624AAA592BEB3DCBDA0CA8 /* Font-Awesome-Swift.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 2E8BD74CDE09ACA475D4988A86A2C041 /* Font-Awesome-Swift.bundle */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CB7B4A82B7F8AD5C19A6C0C7BF88697 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9059506BB06F7BE16783C81066F50605;
+			remoteInfo = "Font-Awesome-Swift";
+		};
+		46C90C9F4C2CB5BC96E336598191C525 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A81CE6C98FC636AA80F5FB190E84F0C;
+			remoteInfo = "STLocationRequest-STLocationRequest";
+		};
+		B263803660245C35A66F49AF93A4717F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5103AA3B86FD939D2C77DC3043B8AC4;
+			remoteInfo = "Font-Awesome-Swift-Font-Awesome-Swift";
+		};
+		C6EB2842EAB09D07873F1AC3C6EDD26F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9059506BB06F7BE16783C81066F50605;
+			remoteInfo = "Font-Awesome-Swift";
+		};
+		F479AB4B7ABB70FC651B88FD286D5E89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B521E95C243106BA4C80889D736468EE;
+			remoteInfo = STLocationRequest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0C8770284E1D3EBF44DAFA06F38FEDD3 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FDED07D27999D8700F082AD3AA06AEF /* STLocationRequest.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = STLocationRequest.xcconfig; sourceTree = "<group>"; };
+		16617E9878819DA030646527CAB4A634 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		1B63350D836F5573E88D311BC57F4618 /* Font-Awesome-Swift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Font-Awesome-Swift-dummy.m"; sourceTree = "<group>"; };
+		26739A9305699545F1A658B60A6CEFE1 /* STLocationRequest-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "STLocationRequest-dummy.m"; sourceTree = "<group>"; };
+		2907ADD9DE89E61E0D587E8FF188CB14 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/MapKit.framework; sourceTree = DEVELOPER_DIR; };
+		2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-umbrella.h"; sourceTree = "<group>"; };
+		2E8BD74CDE09ACA475D4988A86A2C041 /* Font-Awesome-Swift.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Font-Awesome-Swift.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
+		31B8B79F92932E3333E342ACE3803C76 /* Font-Awesome-Swift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Font-Awesome-Swift-prefix.pch"; sourceTree = "<group>"; };
+		336BAF1862D7EFF4F3248C2EB47CED5F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3FFC75E952BEA1EDAAA94BBF17BA54A2 /* STRotatingCamera.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = STRotatingCamera.swift; path = Pod/Source/STRotatingCamera.swift; sourceTree = "<group>"; };
+		4906FB464592B5137E80C717F31801D5 /* STLocationRequest-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STLocationRequest-umbrella.h"; sourceTree = "<group>"; };
+		5400D28A78A589049C83A21EC2CE5C70 /* STLocationRequest-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "STLocationRequest-prefix.pch"; sourceTree = "<group>"; };
+		561E67488F9732397960AD56378024F1 /* Font-Awesome-Swift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Font-Awesome-Swift.modulemap"; sourceTree = "<group>"; };
+		5A762782E2AF6946A363F199E9C1ED16 /* Font_Awesome_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Font_Awesome_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		77B6D8DCB607765BD16A5A1EF8904D4B /* UIViewController+STLocationRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+STLocationRequest.swift"; path = "Pod/Source/UIViewController+STLocationRequest.swift"; sourceTree = "<group>"; };
+		77C276405978C362BCA7CC1933270E2B /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = Pods.modulemap; sourceTree = "<group>"; };
+		7BD20239A4CD55715EB3E4F931C8A2D1 /* FontAwesome.ttf */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file; name = FontAwesome.ttf; path = Source/FontAwesome.ttf; sourceTree = "<group>"; };
+		7C8CE23F8DC893685CA282EE621F4938 /* Font-Awesome-Swift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Font-Awesome-Swift-umbrella.h"; sourceTree = "<group>"; };
+		87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		90683B212AD6B24D59D7662EBE8C62F4 /* STLocationRequestController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = STLocationRequestController.swift; path = Pod/Source/STLocationRequestController.swift; sourceTree = "<group>"; };
+		977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		996BB115F72CDD9ECF75AD81E3995E96 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1FCD07738A56D185F15C2D5453F5E27 /* STLocationRequest.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STLocationRequest.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		B49E922FC77F5C18A4AE37CE48724B87 /* Font_Awesome_Swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Font_Awesome_Swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5AB36B42B0D0E4BA136D011E939C51F /* FAIcon.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FAIcon.swift; path = Source/FAIcon.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		BC3BE5E97919C08188C41EF051F19761 /* LFTPulseAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LFTPulseAnimation.swift; path = Pod/Source/LFTPulseAnimation.swift; sourceTree = "<group>"; };
+		C065490424AEF22DB8049D73BA7620A9 /* STLocationRequest.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = STLocationRequest.modulemap; sourceTree = "<group>"; };
+		CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		D0DA9BD8377214AA3BD894C6E040017B /* StoryboardLocationRequest.storyboard */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.storyboard; name = StoryboardLocationRequest.storyboard; path = Pod/Assets/StoryboardLocationRequest.storyboard; sourceTree = "<group>"; };
+		DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		E523DB958A158203E845F825AEE6E4CD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		E7A4FC4753B77C678A6F493602FF035F /* Font-Awesome-Swift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Font-Awesome-Swift.xcconfig"; sourceTree = "<group>"; };
+		E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-frameworks.sh"; sourceTree = "<group>"; };
+		E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6CFA2DB10865C9214276EFA75500DF3 /* STLocationRequest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STLocationRequest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1AEC3F43E97C80DEDECA0A6BA4517FF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		33865680A5A2CBD18AEDA64FFA8780A3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				05311756DB0AD72B21E37B3EE91787C6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		509DC6A37BC465DD73285B82BBE7AC8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		61B550559A123D0A3BA884862FD99DFD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B3620ABC8CD172E6636232547D4D3E92 /* Font_Awesome_Swift.framework in Frameworks */,
+				7A8DA77F68AE29E00125106F483BCD50 /* Foundation.framework in Frameworks */,
+				83B4B2E38908474E20812D4FE4597565 /* MapKit.framework in Frameworks */,
+				173FEBE2DDA2B0FEFCAFF445EAA5F1EC /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7221173D8D95B0F828399FE4DB3AE0A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				049AA06541B8EFF00F73A5CBEE5BD6C4 /* CoreText.framework in Frameworks */,
+				BEA8DF1E226293FF1B8F26F5F2D2E47F /* Foundation.framework in Frameworks */,
+				26D54AF4D9A1F4DDBC4ED62673691523 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19111AA12C838B63F277749DDE549BB9 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				561E67488F9732397960AD56378024F1 /* Font-Awesome-Swift.modulemap */,
+				E7A4FC4753B77C678A6F493602FF035F /* Font-Awesome-Swift.xcconfig */,
+				1B63350D836F5573E88D311BC57F4618 /* Font-Awesome-Swift-dummy.m */,
+				31B8B79F92932E3333E342ACE3803C76 /* Font-Awesome-Swift-prefix.pch */,
+				7C8CE23F8DC893685CA282EE621F4938 /* Font-Awesome-Swift-umbrella.h */,
+				0C8770284E1D3EBF44DAFA06F38FEDD3 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Font-Awesome-Swift";
+			sourceTree = "<group>";
+		};
+		4D0FB800838A14A4EAC1DE993FB6B5FC /* Font-Awesome-Swift */ = {
+			isa = PBXGroup;
+			children = (
+				B5AB36B42B0D0E4BA136D011E939C51F /* FAIcon.swift */,
+				F16B9DAEB438ECD1DBDE7363C5D2D726 /* Resources */,
+				19111AA12C838B63F277749DDE549BB9 /* Support Files */,
+			);
+			path = "Font-Awesome-Swift";
+			sourceTree = "<group>";
+		};
+		5CF80442EFF0E0D41A41307C3A425A42 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				996BB115F72CDD9ECF75AD81E3995E96 /* Info.plist */,
+				C065490424AEF22DB8049D73BA7620A9 /* STLocationRequest.modulemap */,
+				0FDED07D27999D8700F082AD3AA06AEF /* STLocationRequest.xcconfig */,
+				26739A9305699545F1A658B60A6CEFE1 /* STLocationRequest-dummy.m */,
+				5400D28A78A589049C83A21EC2CE5C70 /* STLocationRequest-prefix.pch */,
+				4906FB464592B5137E80C717F31801D5 /* STLocationRequest-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/STLocationRequest";
+			sourceTree = "<group>";
+		};
+		75D98FF52E597A11900E131B6C4E1ADA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E8446514FBAD26C0E18F24A5715AEF67 /* Info.plist */,
+				79A9DEDC89FE8336BF5FEDAAF75BF7FC /* Pods.modulemap */,
+				D0405803033A2A777B8E4DFA0C1800ED /* Pods-acknowledgements.markdown */,
+				87B213035BAC5F75386F62D3C75D2342 /* Pods-acknowledgements.plist */,
+				894E5DA93A9F359521A89826BE6DA777 /* Pods-dummy.m */,
+				E7F21354943D9F42A70697D5A5EF72E9 /* Pods-frameworks.sh */,
+				CBC0F7C552B739C909B650A0F42F7F38 /* Pods-resources.sh */,
+				2BCC458FDD5F692BBB2BFC64BB5701FC /* Pods-umbrella.h */,
+				977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */,
+				DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+		7C3586276A8F4ADAA9631D4C6B39AE67 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4D0FB800838A14A4EAC1DE993FB6B5FC /* Font-Awesome-Swift */,
+				ABA30FD87B69E2A6CF90CF30E268BBA9 /* STLocationRequest */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				CB0D4C98EF3E5431643BFC3914A2E35A /* Frameworks */,
+				7C3586276A8F4ADAA9631D4C6B39AE67 /* Pods */,
+				82EDBBB14229E10A9ED1906426A01321 /* Products */,
+				B7B80995527643776607AFFA75B91E24 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		82EDBBB14229E10A9ED1906426A01321 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2E8BD74CDE09ACA475D4988A86A2C041 /* Font-Awesome-Swift.bundle */,
+				B49E922FC77F5C18A4AE37CE48724B87 /* Font_Awesome_Swift.framework */,
+				16617E9878819DA030646527CAB4A634 /* Pods.framework */,
+				A1FCD07738A56D185F15C2D5453F5E27 /* STLocationRequest.bundle */,
+				F6CFA2DB10865C9214276EFA75500DF3 /* STLocationRequest.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		ABA30FD87B69E2A6CF90CF30E268BBA9 /* STLocationRequest */ = {
+			isa = PBXGroup;
+			children = (
+				BC3BE5E97919C08188C41EF051F19761 /* LFTPulseAnimation.swift */,
+				90683B212AD6B24D59D7662EBE8C62F4 /* STLocationRequestController.swift */,
+				3FFC75E952BEA1EDAAA94BBF17BA54A2 /* STRotatingCamera.swift */,
+				77B6D8DCB607765BD16A5A1EF8904D4B /* UIViewController+STLocationRequest.swift */,
+				CA52AC308124F85FFB69A46A81B28EEC /* Resources */,
+				5CF80442EFF0E0D41A41307C3A425A42 /* Support Files */,
+			);
+			path = STLocationRequest;
+			sourceTree = "<group>";
+		};
+		B7B80995527643776607AFFA75B91E24 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				75D98FF52E597A11900E131B6C4E1ADA /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		C9F8A0277E28F1247A6B2BD86D80683C /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				77C276405978C362BCA7CC1933270E2B /* CoreText.framework */,
+				336BAF1862D7EFF4F3248C2EB47CED5F /* Foundation.framework */,
+				2907ADD9DE89E61E0D587E8FF188CB14 /* MapKit.framework */,
+				E523DB958A158203E845F825AEE6E4CD /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CA52AC308124F85FFB69A46A81B28EEC /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D0DA9BD8377214AA3BD894C6E040017B /* StoryboardLocationRequest.storyboard */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CB0D4C98EF3E5431643BFC3914A2E35A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5A762782E2AF6946A363F199E9C1ED16 /* Font_Awesome_Swift.framework */,
+				C9F8A0277E28F1247A6B2BD86D80683C /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F16B9DAEB438ECD1DBDE7363C5D2D726 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				7BD20239A4CD55715EB3E4F931C8A2D1 /* FontAwesome.ttf */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1360BB9D2BA659404498A129E749591F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EC08B01DFC56DD96279C04B28BCB4876 /* STLocationRequest-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56D7CAA0827E0F5A86CFACBC9F0C886E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7041CF04261634CBCA5C78C15B65DD37 /* Pods-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E3EE0EE779C2713511DDF3A33BE177BA /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				ABABCE508732806103FE5B6FAB95F761 /* Font-Awesome-Swift-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2DFF181167C6E4FDE11EE59156B36B7F /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F333673693489D46448026536A2F27AB /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				43D8483E39E5D07F187BC3185441B21E /* Sources */,
+				33865680A5A2CBD18AEDA64FFA8780A3 /* Frameworks */,
+				56D7CAA0827E0F5A86CFACBC9F0C886E /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				50390BE6ADDB286475B4FF39F39EBF55 /* PBXTargetDependency */,
+				03027C3C21941300619B24F289662790 /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 16617E9878819DA030646527CAB4A634 /* Pods.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3A81CE6C98FC636AA80F5FB190E84F0C /* STLocationRequest-STLocationRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6CC3A7EDBF96C34F2894B7CD47D2990 /* Build configuration list for PBXNativeTarget "STLocationRequest-STLocationRequest" */;
+			buildPhases = (
+				F8ECFB95D78ABAAA275CD8D5CD836B29 /* Sources */,
+				509DC6A37BC465DD73285B82BBE7AC8A /* Frameworks */,
+				1FB0619D9BAFF0CA62D866DF21AA5E69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "STLocationRequest-STLocationRequest";
+			productName = "STLocationRequest-STLocationRequest";
+			productReference = A1FCD07738A56D185F15C2D5453F5E27 /* STLocationRequest.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+		9059506BB06F7BE16783C81066F50605 /* Font-Awesome-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6A2F583E1B717A62AC15785F162BE4A /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift" */;
+			buildPhases = (
+				1DE04CCCC89111B503082491A8E280A2 /* Sources */,
+				F7221173D8D95B0F828399FE4DB3AE0A /* Frameworks */,
+				AAA9DC2D5C7A82BCFD648B5F43D681EB /* Resources */,
+				E3EE0EE779C2713511DDF3A33BE177BA /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89AEAFEF7ABC4669F67BF05B9260C59A /* PBXTargetDependency */,
+			);
+			name = "Font-Awesome-Swift";
+			productName = "Font-Awesome-Swift";
+			productReference = B49E922FC77F5C18A4AE37CE48724B87 /* Font_Awesome_Swift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B521E95C243106BA4C80889D736468EE /* STLocationRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C82E954B060CF5912EE3085F0E38ECBD /* Build configuration list for PBXNativeTarget "STLocationRequest" */;
+			buildPhases = (
+				F7C9F5B54FD6C7F071C6788ED98408DD /* Sources */,
+				61B550559A123D0A3BA884862FD99DFD /* Frameworks */,
+				A6210D8F1B735FF51D5BD777F9C4D94A /* Resources */,
+				1360BB9D2BA659404498A129E749591F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				59B84A832575926E28C1E85B7661ACF2 /* PBXTargetDependency */,
+				558B52EC96D77ECC543D554A0F5FF5A9 /* PBXTargetDependency */,
+			);
+			name = STLocationRequest;
+			productName = STLocationRequest;
+			productReference = F6CFA2DB10865C9214276EFA75500DF3 /* STLocationRequest.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E5103AA3B86FD939D2C77DC3043B8AC4 /* Font-Awesome-Swift-Font-Awesome-Swift */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0DC21960BB380F09A2E18232BC25C520 /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift-Font-Awesome-Swift" */;
+			buildPhases = (
+				D7854A44C8CCDCEC00A28FBF07A7811E /* Sources */,
+				1AEC3F43E97C80DEDECA0A6BA4517FF7 /* Frameworks */,
+				EC60F63785343A93D8D21EFA72DC9885 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Font-Awesome-Swift-Font-Awesome-Swift";
+			productName = "Font-Awesome-Swift-Font-Awesome-Swift";
+			productReference = 2E8BD74CDE09ACA475D4988A86A2C041 /* Font-Awesome-Swift.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 82EDBBB14229E10A9ED1906426A01321 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9059506BB06F7BE16783C81066F50605 /* Font-Awesome-Swift */,
+				E5103AA3B86FD939D2C77DC3043B8AC4 /* Font-Awesome-Swift-Font-Awesome-Swift */,
+				2DFF181167C6E4FDE11EE59156B36B7F /* Pods */,
+				B521E95C243106BA4C80889D736468EE /* STLocationRequest */,
+				3A81CE6C98FC636AA80F5FB190E84F0C /* STLocationRequest-STLocationRequest */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1FB0619D9BAFF0CA62D866DF21AA5E69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				12E63E4D53F66E763C3C837F26DBD518 /* StoryboardLocationRequest.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A6210D8F1B735FF51D5BD777F9C4D94A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				199444605CB98BEA1FB114B7BE118041 /* STLocationRequest.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AAA9DC2D5C7A82BCFD648B5F43D681EB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F90F25956B624AAA592BEB3DCBDA0CA8 /* Font-Awesome-Swift.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EC60F63785343A93D8D21EFA72DC9885 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DF6631DD498411E7CF772869E0BD9F3B /* FontAwesome.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1DE04CCCC89111B503082491A8E280A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BDE1212E948A9CDCAEA1621A6B65F5FA /* FAIcon.swift in Sources */,
+				B2359160D4FC6CF8AA66C892B2B7C590 /* Font-Awesome-Swift-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		43D8483E39E5D07F187BC3185441B21E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8A54E4459B3D434D5115173CB0275C25 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D7854A44C8CCDCEC00A28FBF07A7811E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7C9F5B54FD6C7F071C6788ED98408DD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				56E407C6A69EDABBF56A1B426977081A /* LFTPulseAnimation.swift in Sources */,
+				170DDBE0A48E6B8B67BE7C7A87CF8E70 /* STLocationRequest-dummy.m in Sources */,
+				D6FDDBA4DA11D4617DB5541738C6EDE4 /* STLocationRequestController.swift in Sources */,
+				322979BAFC47411818F5AF0301894EA9 /* STRotatingCamera.swift in Sources */,
+				DB68DF12FE392702CC1357B3E9E71E45 /* UIViewController+STLocationRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F8ECFB95D78ABAAA275CD8D5CD836B29 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03027C3C21941300619B24F289662790 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = STLocationRequest;
+			target = B521E95C243106BA4C80889D736468EE /* STLocationRequest */;
+			targetProxy = F479AB4B7ABB70FC651B88FD286D5E89 /* PBXContainerItemProxy */;
+		};
+		50390BE6ADDB286475B4FF39F39EBF55 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Font-Awesome-Swift";
+			target = 9059506BB06F7BE16783C81066F50605 /* Font-Awesome-Swift */;
+			targetProxy = 2CB7B4A82B7F8AD5C19A6C0C7BF88697 /* PBXContainerItemProxy */;
+		};
+		558B52EC96D77ECC543D554A0F5FF5A9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "STLocationRequest-STLocationRequest";
+			target = 3A81CE6C98FC636AA80F5FB190E84F0C /* STLocationRequest-STLocationRequest */;
+			targetProxy = 46C90C9F4C2CB5BC96E336598191C525 /* PBXContainerItemProxy */;
+		};
+		59B84A832575926E28C1E85B7661ACF2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Font-Awesome-Swift";
+			target = 9059506BB06F7BE16783C81066F50605 /* Font-Awesome-Swift */;
+			targetProxy = C6EB2842EAB09D07873F1AC3C6EDD26F /* PBXContainerItemProxy */;
+		};
+		89AEAFEF7ABC4669F67BF05B9260C59A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Font-Awesome-Swift-Font-Awesome-Swift";
+			target = E5103AA3B86FD939D2C77DC3043B8AC4 /* Font-Awesome-Swift-Font-Awesome-Swift */;
+			targetProxy = B263803660245C35A66F49AF93A4717F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		05D7482AC3EAC6BE7F5CD9B42D3EF871 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A4FC4753B77C678A6F493602FF035F /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Font-Awesome-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = Font_Awesome_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		13FF4CEEA77D723B9B8CE352693A9BFE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDED07D27999D8700F082AD3AA06AEF /* STLocationRequest.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = STLocationRequest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		74857149DC1E0D599B8A01A78349A926 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		769AA29B4BD1DC3DCAF13F2061B5EE9B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A4FC4753B77C678A6F493602FF035F /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/Font-Awesome-Swift/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/Font-Awesome-Swift/Font-Awesome-Swift.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = Font_Awesome_Swift;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		804C965A1593636F841C690A4AF4A48B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A4FC4753B77C678A6F493602FF035F /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = "Font-Awesome-Swift";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		8241FA1B2EE172F5DD0B37D69937A743 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDED07D27999D8700F082AD3AA06AEF /* STLocationRequest.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/STLocationRequest/STLocationRequest-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/STLocationRequest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/STLocationRequest/STLocationRequest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = STLocationRequest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8F4FE186F7CC17B16FFA5FEA580367C9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7A4FC4753B77C678A6F493602FF035F /* Font-Awesome-Swift.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = "Font-Awesome-Swift";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		97CEE727FF0AD4E4528B429251047F1D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 977577C045EDA9D9D1F46E2598D19FC7 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E0BDC7DCE106F892AB25D181738C8E84 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDED07D27999D8700F082AD3AA06AEF /* STLocationRequest.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				PRODUCT_NAME = STLocationRequest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		FEE5ADA46888DB56C9C3B2CE12E29A1F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0FDED07D27999D8700F082AD3AA06AEF /* STLocationRequest.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/STLocationRequest/STLocationRequest-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/STLocationRequest/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/STLocationRequest/STLocationRequest.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = STLocationRequest;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		FF931BE9D24AED04AED75DA6854CC99A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA312349A49333542E6F4B36B329960E /* Pods.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods/Pods.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0DC21960BB380F09A2E18232BC25C520 /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift-Font-Awesome-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				804C965A1593636F841C690A4AF4A48B /* Debug */,
+				8F4FE186F7CC17B16FFA5FEA580367C9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5CE5176205D06FF3FFE3DDDA9291E44B /* Debug */,
+				74857149DC1E0D599B8A01A78349A926 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6A2F583E1B717A62AC15785F162BE4A /* Build configuration list for PBXNativeTarget "Font-Awesome-Swift" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				05D7482AC3EAC6BE7F5CD9B42D3EF871 /* Debug */,
+				769AA29B4BD1DC3DCAF13F2061B5EE9B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A6CC3A7EDBF96C34F2894B7CD47D2990 /* Build configuration list for PBXNativeTarget "STLocationRequest-STLocationRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E0BDC7DCE106F892AB25D181738C8E84 /* Debug */,
+				13FF4CEEA77D723B9B8CE352693A9BFE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C82E954B060CF5912EE3085F0E38ECBD /* Build configuration list for PBXNativeTarget "STLocationRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8241FA1B2EE172F5DD0B37D69937A743 /* Debug */,
+				FEE5ADA46888DB56C9C3B2CE12E29A1F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F333673693489D46448026536A2F27AB /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				97CEE727FF0AD4E4528B429251047F1D /* Debug */,
+				FF931BE9D24AED04AED75DA6854CC99A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
