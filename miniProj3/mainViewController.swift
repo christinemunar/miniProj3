@@ -18,11 +18,10 @@ class mainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setCustomButtonStyle(startButton)
-        startButton.setTitleColor(UIColor(netHex: 0x317b52), forState: UIControlState.Normal)
-        mainLabel.textColor = UIColor(netHex: 0x317b52)
-        //arrowPic.setX(self.view.bounds.width/4)
         // Do any additional setup after loading the view.
+        setCustomButtonStyle(startButton)
+        mainLabel.textColor = UIColor(netHex: 0x317b52)
+        print(arrowPic.center.x)
     }
 
     override func didReceiveMemoryWarning() {
@@ -32,12 +31,13 @@ class mainViewController: UIViewController {
     
     override func viewWillAppear(animated: Bool) {
         arrowPic.alpha = 0
-        //arrowPic.setX(self.view.bounds.width/8)
+        arrowPic.setX(self.view.bounds.width*(0.90/3))
+        print(arrowPic.center.x)
     }
     
     override func viewDidAppear(animated: Bool) {
         UIView.animateWithDuration(1.75, delay: 0.25, options: [.CurveEaseInOut, .Repeat], animations:
-            {self.arrowPic.setX(self.view.bounds.width*(2.7/5))
+            {self.arrowPic.setX(self.view.bounds.width*(1.38/3))
             self.arrowPic.alpha = 1
             }, completion: nil)
     }
@@ -58,7 +58,7 @@ class mainViewController: UIViewController {
         button.layer.masksToBounds = true
         button.setTitleColor(UIColor(netHex: 0x184a4a), forState: UIControlState.Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
-        button.setBackgroundImage(getImageWithColor(UIColor.orangeColor(), size: button.bounds.size), forState: UIControlState.Highlighted)
+        button.setBackgroundImage(getImageWithColor(UIColor(netHex: 0x317b52), size: button.bounds.size), forState: UIControlState.Highlighted)
     }
     
     private func getImageWithColor(color: UIColor, size: CGSize) -> UIImage {
