@@ -177,5 +177,17 @@ class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegat
         UIGraphicsEndImageContext()
         return image
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "toWeb" {
+            let vc = segue.destinationViewController as! WebViewController
+            mySearch = (tabBarController as! MainTabBarController).mySearch
+            vc.fullSearch = mySearch.currentSearch()
+        }
+    }
+    
+    @IBAction func toWebView(sender: UIButton) {
+        self.performSegueWithIdentifier("toWeb", sender: sender)
+    }
 
 }

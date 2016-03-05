@@ -80,6 +80,9 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="arA-wg-UqJ"/>
                                 </constraints>
+                                <connections>
+                                    <action selector="toWebView:" destination="Bvi-La-sQR" eventType="touchUpInside" id="ji6-dX-wbQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCx-Qv-NHZ">
                                 <rect key="frame" x="61" y="80" width="479" height="36"/>
@@ -114,6 +117,7 @@
                         <outlet property="locationButton" destination="weq-Ha-W76" id="ovS-0H-ySc"/>
                         <outlet property="mapView" destination="tXr-48-GVn" id="ySk-B9-RuS"/>
                         <outlet property="requestLocationButton" destination="aCx-Qv-NHZ" id="dPD-4U-sua"/>
+                        <segue destination="pUG-PB-5Wi" kind="show" identifier="toWeb" id="i0T-e2-LHc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQ9-mU-tUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -211,7 +215,6 @@
                     <connections>
                         <segue destination="BRZ-tb-M6S" kind="relationship" relationship="viewControllers" id="SZ2-PI-jPh"/>
                         <segue destination="Bvi-La-sQR" kind="relationship" relationship="viewControllers" id="vJl-a6-uIW"/>
-                        <segue destination="pUG-PB-5Wi" kind="relationship" relationship="viewControllers" id="4bi-si-1HP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qty-Kq-ibz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -230,17 +233,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcq-WY-UAu">
-                                <rect key="frame" x="0.0" y="118" width="600" height="482"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcq-WY-UAu">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-IP-3tS">
-                                <rect key="frame" x="31" y="72" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                                <connections>
-                                    <action selector="searchButtonPressed:" destination="pUG-PB-5Wi" eventType="touchUpInside" id="TIU-XR-sZq"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -258,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6T-Ii-BcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1897" y="1028"/>
+            <point key="canvasLocation" x="1933" y="1028"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HUy-nk-LSO">

@@ -10,21 +10,16 @@ import UIKit
 
 class WebViewController: UIViewController {
     
-    var mySearch = SearchModel()
     var fullSearch:String = ""
 
     @IBOutlet weak var webView: UIWebView!
-    @IBAction func searchButtonPressed(sender: AnyObject) {
-        fullSearch = mySearch.currentSearch()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         let urlString = fullSearch.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
         let url = NSURL(string: "https://www.google.com/search?q=\(urlString)")
         let request = NSURLRequest(URL: url!)
         webView.loadRequest(request)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        mySearch = (tabBarController as! MainTabBarController).mySearch
     }
 
     override func didReceiveMemoryWarning() {
