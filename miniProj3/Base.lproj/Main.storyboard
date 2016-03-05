@@ -19,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="67"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="3fM-ci-3o5" id="byl-9L-zIr">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="66.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="66"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Chd-yq-7Kx">
@@ -28,7 +28,7 @@
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-L2-oaH">
+                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="KVc-L2-oaH">
                                             <rect key="frame" x="505" y="18" width="51" height="31"/>
                                             <connections>
                                                 <action selector="cellSwitch:" destination="3fM-ci-3o5" eventType="valueChanged" id="eOq-2b-C9x"/>
@@ -58,7 +58,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68a-Uz-Fxs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2" y="1038"/>
+            <point key="canvasLocation" x="564" y="1028"/>
         </scene>
         <!--Location Cocoapod-->
         <scene sceneID="jOC-EE-GP0">
@@ -80,9 +80,6 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="arA-wg-UqJ"/>
                                 </constraints>
-                                <connections>
-                                    <action selector="locationPressed:" destination="Bvi-La-sQR" eventType="touchUpInside" id="L7V-Na-glO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aCx-Qv-NHZ">
                                 <rect key="frame" x="61" y="80" width="479" height="36"/>
@@ -117,12 +114,11 @@
                         <outlet property="locationButton" destination="weq-Ha-W76" id="ovS-0H-ySc"/>
                         <outlet property="mapView" destination="tXr-48-GVn" id="ySk-B9-RuS"/>
                         <outlet property="requestLocationButton" destination="aCx-Qv-NHZ" id="dPD-4U-sua"/>
-                        <segue destination="pUG-PB-5Wi" kind="show" identifier="webSegue" id="VG7-bq-9ux"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wQ9-mU-tUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="654" y="1036"/>
+            <point key="canvasLocation" x="1226" y="1028"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="Pnp-5o-eTm">
@@ -203,10 +199,10 @@
             </objects>
             <point key="canvasLocation" x="587" y="265"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="E9R-iJ-AIw">
             <objects>
-                <tabBarController id="EFH-XM-7B0" sceneMemberID="viewController">
+                <tabBarController id="EFH-XM-7B0" customClass="MainTabBarController" customModule="miniProj3" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" id="8L5-4M-2Ke">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -215,13 +211,14 @@
                     <connections>
                         <segue destination="BRZ-tb-M6S" kind="relationship" relationship="viewControllers" id="SZ2-PI-jPh"/>
                         <segue destination="Bvi-La-sQR" kind="relationship" relationship="viewControllers" id="vJl-a6-uIW"/>
+                        <segue destination="pUG-PB-5Wi" kind="relationship" relationship="viewControllers" id="4bi-si-1HP"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Qty-Kq-ibz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1226" y="265"/>
         </scene>
-        <!--Web View Controller-->
+        <!--Item-->
         <scene sceneID="bUa-td-5V2">
             <objects>
                 <viewController id="pUG-PB-5Wi" customClass="WebViewController" customModule="miniProj3" customModuleProvider="target" sceneMemberID="viewController">
@@ -233,10 +230,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcq-WY-UAu">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <webView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Fcq-WY-UAu">
+                                <rect key="frame" x="0.0" y="118" width="600" height="482"/>
                                 <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                             </webView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gkc-IP-3tS">
+                                <rect key="frame" x="31" y="72" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="searchButtonPressed:" destination="pUG-PB-5Wi" eventType="touchUpInside" id="TIU-XR-sZq"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -246,6 +250,7 @@
                             <constraint firstItem="Fcq-WY-UAu" firstAttribute="leading" secondItem="Ze2-gv-71C" secondAttribute="leading" id="vpU-Q5-CGH"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="awl-uV-Qjq"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="webView" destination="Fcq-WY-UAu" id="zzR-eK-P52"/>
@@ -253,7 +258,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="m6T-Ii-BcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1405" y="1038"/>
+            <point key="canvasLocation" x="1897" y="1028"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="HUy-nk-LSO">

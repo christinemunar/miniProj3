@@ -13,6 +13,8 @@ import MapKit
 
 class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
+    var mySearch = SearchModel()
+    
     @IBOutlet weak var locationButton: UIButton!
     // Storyboard IBOutlet for the Request Location Button
     @IBOutlet weak var requestLocationButton: UIButton!
@@ -22,17 +24,6 @@ class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegat
     //@IBOutlet weak var addressLabel: UILabel!
     // Storyboard IBOutlet MapView
     @IBOutlet weak var mapView: MKMapView!
-    
-    //button pressed to send to web with respective information
-    @IBAction func locationPressed(sender: UIButton) {
-        self.performSegueWithIdentifier("webSegue", sender: sender)
-    }
-    
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "webSegue" {
-            let vc = segue.destinationViewController as! WebViewController
-        }
-    }
     
     /*
     viewDidLoad Method
@@ -57,6 +48,9 @@ class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegat
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "locationRequestNotNow", name: "locationRequestNotNow", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "locationRequestAuthorized", name: "locationRequestAuthorized", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "locationRequestDenied", name: "locationRequestDenied", object: nil)
+        
+        let tbc = tabBarController as! MainTabBarController
+        mySearch = tbc.mySearch
     }
     
     /*
@@ -139,6 +133,7 @@ class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegat
             UIView.animateWithDuration(0.8, animations: { () -> Void in
                 self.mapView.alpha = 0
                 self.locationButton.setTitle("\(thoroughfare)\(subThoroughfare)\(postalCode)\(locality)", forState: UIControlState.Normal)
+                self.mySearch.locationSearch = "\(thoroughfare)\(subThoroughfare)\(postalCode)\(locality)"
                 self.mapView.alpha = 1
             })
         }

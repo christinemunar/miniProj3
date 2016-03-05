@@ -9,32 +9,26 @@
 import UIKit
 
 class WebViewController: UIViewController {
+    
+    var mySearch = SearchModel()
+    var fullSearch:String = ""
 
     @IBOutlet weak var webView: UIWebView!
+    @IBAction func searchButtonPressed(sender: AnyObject) {
+        fullSearch = mySearch.currentSearch()
+        let urlString = fullSearch.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let url = NSURL(string: "https://www.google.com/search?q=\(urlString)")
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadURL()
-        // Do any additional setup after loading the view.
+        mySearch = (tabBarController as! MainTabBarController).mySearch
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    func loadURL() {
-        let url = NSURL(string: "https://google.com")
-        let request = NSURLRequest(URL: url!)
-        webView.loadRequest(request)
-    }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

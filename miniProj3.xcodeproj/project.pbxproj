@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BE5163361C8A5E1A007D4E42 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5163351C8A5E1A007D4E42 /* MainTabBarController.swift */; };
+		BE5163381C8A5E6E007D4E42 /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE5163371C8A5E6E007D4E42 /* SearchModel.swift */; };
 		BEA7A0A91C8558EF005387F6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7A0A81C8558EF005387F6 /* AppDelegate.swift */; };
 		BEA7A0AB1C8558EF005387F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA7A0AA1C8558EF005387F6 /* ViewController.swift */; };
 		BEA7A0AE1C8558EF005387F6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BEA7A0AC1C8558EF005387F6 /* Main.storyboard */; };
@@ -24,6 +26,8 @@
 		3B28AFE8253FD8668AE5677F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		470CE553FF2151E827125372 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		85CBADA78800CDC494C9B6CA /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BE5163351C8A5E1A007D4E42 /* MainTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		BE5163371C8A5E6E007D4E42 /* SearchModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		BEA7A0A51C8558EE005387F6 /* miniProj3.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = miniProj3.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA7A0A81C8558EF005387F6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BEA7A0AA1C8558EF005387F6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,6 +87,8 @@
 				BEA7A0A81C8558EF005387F6 /* AppDelegate.swift */,
 				BEA7A0AA1C8558EF005387F6 /* ViewController.swift */,
 				BEA7A0AC1C8558EF005387F6 /* Main.storyboard */,
+				BE5163371C8A5E6E007D4E42 /* SearchModel.swift */,
+				BE5163351C8A5E1A007D4E42 /* MainTabBarController.swift */,
 				C59A7B2C1C87E19F00672894 /* mainViewController.swift */,
 				BEA7A0BC1C855EB9005387F6 /* LocationCocoapodViewController.swift */,
 				BEA7A0BE1C855F13005387F6 /* WebViewController.swift */,
@@ -228,6 +234,8 @@
 			files = (
 				BEA7A0AB1C8558EF005387F6 /* ViewController.swift in Sources */,
 				BEA7A0A91C8558EF005387F6 /* AppDelegate.swift in Sources */,
+				BE5163361C8A5E1A007D4E42 /* MainTabBarController.swift in Sources */,
+				BE5163381C8A5E6E007D4E42 /* SearchModel.swift in Sources */,
 				C59A7B2D1C87E19F00672894 /* mainViewController.swift in Sources */,
 				C59A7B2B1C87DE2A00672894 /* SettingsTableViewCell.swift in Sources */,
 				BEA7A0BB1C855E87005387F6 /* SettingsTableViewController.swift in Sources */,
