@@ -10,9 +10,10 @@ import UIKit
 
 class WebViewController: UIViewController {
 
+    @IBOutlet weak var webView: UIWebView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadURL()
         // Do any additional setup after loading the view.
     }
 
@@ -21,7 +22,11 @@ class WebViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func loadURL() {
+        let url = NSURL(string: "https://google.com")
+        let request = NSURLRequest(URL: url!)
+        webView.loadRequest(request)
+    }
     /*
     // MARK: - Navigation
 

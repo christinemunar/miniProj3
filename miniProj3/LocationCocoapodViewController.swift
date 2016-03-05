@@ -13,15 +13,27 @@ import MapKit
 
 class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegate, MKMapViewDelegate {
     
-    
+    @IBOutlet weak var locationButton: UIButton!
     // Storyboard IBOutlet for the Request Location Button
     @IBOutlet weak var requestLocationButton: UIButton!
     // Initialize CLLocationManager
     var locationManager = CLLocationManager()
     // Storyboard IBOutlet
-    @IBOutlet weak var addressLabel: UILabel!
+    //@IBOutlet weak var addressLabel: UILabel!
     // Storyboard IBOutlet MapView
     @IBOutlet weak var mapView: MKMapView!
+    
+    //button pressed to send to web with respective information
+    @IBAction func locationPressed(sender: UIButton) {
+        self.performSegueWithIdentifier("webSegue", sender: sender)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "webSegue" {
+            let vc = segue.destinationViewController as! WebViewController
+        }
+    }
+    
     /*
     viewDidLoad Method
     */
@@ -34,6 +46,7 @@ class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegat
         
         // Get a nice looking UIButton
         self.setCustomButtonStyle(self.requestLocationButton)
+        self.setCustomButtonStyle(self.locationButton)
         
         // Set the locationManager
         self.locationManager.delegate = self
@@ -125,7 +138,7 @@ class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegat
             }
             UIView.animateWithDuration(0.8, animations: { () -> Void in
                 self.mapView.alpha = 0
-                self.addressLabel.text = "\(thoroughfare)\(subThoroughfare)\(postalCode)\(locality)"
+                self.locationButton.setTitle("\(thoroughfare)\(subThoroughfare)\(postalCode)\(locality)", forState: UIControlState.Normal)
                 self.mapView.alpha = 1
             })
         }
@@ -149,10 +162,10 @@ class LocationCocoapodViewController: UIViewController, CLLocationManagerDelegat
     */
     private func setCustomButtonStyle(button : UIButton){
         button.layer.borderWidth = 1.0
-        button.layer.borderColor = UIColor.orangeColor().CGColor
+        button.layer.borderColor = UIColor(netHex: 0x184a4a).CGColor
         button.layer.cornerRadius = 5.0
         button.layer.masksToBounds = true
-        button.setTitleColor(UIColor.orangeColor(), forState: UIControlState.Normal)
+        button.setTitleColor(UIColor(netHex: 0x184a4a), forState: UIControlState.Normal)
         button.setTitleColor(UIColor.whiteColor(), forState: UIControlState.Highlighted)
         button.setBackgroundImage(getImageWithColor(UIColor.orangeColor(), size: button.bounds.size), forState: UIControlState.Highlighted)
     }
