@@ -37,6 +37,7 @@ class SettingsTableViewCell: UITableViewCell {
     }
     
     @IBOutlet weak var cellLabel: UILabel!
+    @IBOutlet weak var cellSwitch: UISwitch!
     
     override func awakeFromNib() {
         super.awakeFromNib()

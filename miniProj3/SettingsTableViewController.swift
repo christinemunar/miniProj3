@@ -20,6 +20,8 @@ class SettingsTableViewController: UITableViewController {
         super.viewDidLoad()
         let tbc = tabBarController as! MainTabBarController
         mySearch = tbc.mySearch
+        self.view.backgroundColor = UIColor(netHex: 0x577f7f)
+        self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
     }
 
     override func didReceiveMemoryWarning() {
@@ -39,7 +41,9 @@ class SettingsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier(reuseIdentifier, forIndexPath: indexPath) as! SettingsTableViewCell
         cell.cellLabel.text = settingNames[indexPath.row]
         cell.thisSearch = mySearch
-        
+        cell.cellLabel.textColor = UIColor.whiteColor()
+        cell.cellSwitch.onTintColor = UIColor(netHex: 0x399494)
+        cell.backgroundColor = UIColor(netHex: 0x577f7f)
         return cell
     }
 
